@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/StR0vErBG/personal-server/issues"
   },
-  "homepage": "https://github.com/StR0vErBG/personal-server#readme"
+  "homepage": "https://github.com/StR0vErBG/personal-server#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.16"
+  }
 }
