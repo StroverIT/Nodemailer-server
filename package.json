@@ -1,0 +1,21 @@
+{
+  "name": "personalserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StR0vErBG/personal-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StR0vErBG/personal-server/issues"
+  },
+  "homepage": "https://github.com/StR0vErBG/personal-server#readme"
+}
