@@ -12,7 +12,7 @@ export const sendEmail = async (fromEmail, email, subject, text) => {
       service: 'gmail',
       auth: {
         type: "OAuth2",
-       user: "softofficepayment@gmail.com",
+       user: "emilzlatinov123@gmail.com",
        clientId: process.env.CLIENT_ID,
        clientSecret: process.env.CLIENT_SECRET,
        refreshToken: process.env.REFRESH_TOKEN,
@@ -22,7 +22,6 @@ export const sendEmail = async (fromEmail, email, subject, text) => {
     });
 
     await transporter.sendMail({
-      // from: "softofficepayment@gmail.com",
       from: fromEmail,
       to: email,
       subject: subject,
