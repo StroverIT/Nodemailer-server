@@ -21,11 +21,11 @@ app.post("/contactUs", async (req, res, next) => {
       console.log(req.body);
     const message = `от ${req.body.user} - ${req.body.message}`
       await sendEmail( req.body.email, "emilzlatinov123@gmail.com", req.body.subject , message)
-    res.send({messageEN: "You have successfully sent the email"})
+    res.send({messageEn: "You have successfully sent the email"})
 
     }catch(e){
       if(e) console.log(e);
-    res.send({messageEN: "Something went wrong!"})
+    res.send({messageEn: "Something went wrong!"})
 
     }
   });
