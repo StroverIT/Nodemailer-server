@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.get("/", (req,res)=>{
   res.render(path.resolve("views/index.ejs"))
 })
+
 app.post("/contactUs", async (req, res, next) => {  
     try{
       console.log(req.body);
