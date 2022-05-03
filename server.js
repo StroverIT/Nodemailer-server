@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get("/", (req,res)=>{
-  res.write(path.resolve("views/index.html"))
+  res.render(path.resolve("views/index.ejs"))
 })
 app.post("/contactUs", async (req, res, next) => {  
     try{
