@@ -1,1 +1,1 @@
-# personal-server
+# nodemailer server
