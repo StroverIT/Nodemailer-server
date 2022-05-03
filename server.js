@@ -4,7 +4,7 @@ const express = require("express")
 const http = require("http")
 const cors = require("cors")
 const bodyParser = require("body-parser")
-
+const path = require("path")
 const sendEmail = require("./utils/email.js")
 
 const app = express()
@@ -12,10 +12,16 @@ const app = express()
 const port = process.env.PORT || 8080
 const server = http.createServer(app)
 
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get("/", (req,res)=>{
+  res.write(path.resolve("views/index.html"))
+})
 app.post("/contactUs", async (req, res, next) => {  
     try{
       console.log(req.body);
