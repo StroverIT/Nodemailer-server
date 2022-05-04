@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const express = require("express")
-const http = require("http")
+const https = require("https")
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const path = require("path")
@@ -10,7 +10,7 @@ const fs = require("fs")
 const app = express()
 
 const port = process.env.PORT || 8080
-const server = http.createServer(app)
+const server = https.createServer(app)
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
