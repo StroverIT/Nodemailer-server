@@ -11,8 +11,8 @@ const app = express()
 
 const port = process.env.PORT || 8080
 const options = {
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
+  key: fs.readFileSync(path.resolve("ssl/key.pem")),
+  cert: fs.readFileSync(path.resolve("ssl/cert.pem")),
 }
 const server = https.createServer(options,app)
 
