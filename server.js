@@ -6,7 +6,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 const path = require("path")
 const sendEmail = require("./utils/email.js")
-
+const fs = require("fs")
 const app = express()
 
 const port = process.env.PORT || 8080
