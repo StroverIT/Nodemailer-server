@@ -10,7 +10,11 @@ const fs = require("fs")
 const app = express()
 
 const port = process.env.PORT || 8080
-const server = https.createServer(app)
+const options = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
+}
+const server = https.createServer(options,app)
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
